@@ -1,1 +1,93 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/scss/bootstrap";
+
+.list-group {
+  list-style: none;
+
+
+  .list-group-item {
+    margin-bottom: 1px;
+    display: flex;
+
+    &.with-icon, &.with-btn {
+      padding: 0;
+
+      .text {
+        flex: 1 1 auto;
+        padding: $list-group-item-padding-y $list-group-item-padding-x;
+      }
+
+      .icon, .btn {
+        //background-color: transparent;
+        //color: $white;
+        //border-color: transparent;
+
+        &:disabled{
+          background-color: transparent !important;
+        }
+      }
+
+      .btn {
+        &:hover, &.hover {
+          background-color: darken($primary, 20%)
+        }
+
+        &:focus, &.focus {
+          background-color: darken($primary, 30%)
+        }
+
+        &:active, &.active {
+          background-color: $primary
+        }
+      }
+
+      .btn-danger {
+        &:hover, &.hover {
+          background-color: darken($danger, 20%)
+        }
+
+        &:focus, &.focus {
+          background-color: darken($danger, 30%)
+        }
+
+        &:active, &.active {
+          background-color: $danger
+        }
+      }
+    }
+  }
+
+  &.list-group-action {
+    .list-group-item {
+      cursor: pointer;
+
+      &:hover, &.hover {
+        background-color: darken($primary, 20%)
+      }
+
+      &:focus, &.focus {
+        background-color: darken($primary, 30%)
+      }
+
+      &:active, &.active {
+        background-color: $primary
+      }
+    }
+  }
+
+  .list-group-draggable {
+
+  }
+
+  .list-group-item.list-group-item-empty {
+    background-color: transparentize($list-group-bg, .5);
+    cursor: default;
+
+    &:hover, &.hover,
+    &:focus, &.focus,
+    &:active, &.active {
+      background-color: transparentize($list-group-bg, .5);
+    }
+  }
+}
+

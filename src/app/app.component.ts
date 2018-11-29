@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-animations';
+  items = [
+    {title: 'TEST1'},
+    {title: 'TEST2'},
+    {title: 'TEST3'},
+    {title: 'TEST4'},
+    {title: 'TEST5'}
+  ];
+
+  selectedItems = [];
 }
